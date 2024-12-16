@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карпати</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            color: #2c5e2e;
+            text-align: center;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .photos img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2c5e2e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1f451f;
+        }
+        #message {
+            text-align: justify;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Карпати</h1>
+    <p><b>Карпа́ти</b> — гірська система на сході Центральної Європи, на території України, Угорщини, Чехії, Польщі, Словаччині, Румунії, Сербії та Австрії. Простягається від околиць Братислави до Залізних Воріт на 1 500 км, утворюючи опуклу дугу, що замикає Середньодунайську рівнину.</p>
+    <p><b>Карпати</b> — один з головних вододілів Європи <b>між Балтійським і Чорним морем.</b> Орографічно виділяють <b>Західні</b> Карпати, <b>Східні</b> Карпати (частина яких — так звані Українські Карпати), <b>Бескиди, Південні</b> Карпати, <b>Західні Румунські</b> гори і <b>Трансильванське</b> плато.</p>
+
+    <!-- Кнопка -->
+    <button onclick="toggleContent()">Дізнатися більше</button>
+
+    <!-- Контейнер для додаткового контенту -->
+    <div id="extraContent" style="display: none;">
+        <p id="message">Переважаючі висоти Карпат <b>800—1200 м,</b> найбільша висота — <b>2 655 м (гора Ґерлаховскі штіт в Татрах),</b> в Україні — гора <b>Говерла</b> (2 061 м). <b>Найбільша ширина — 430 км.</b> Карпатські гори відносно молоді, їм понад <b>25 мільйонів років.</b> Велика гірська система Карпат починається недалеко від <b>Братіслави (Словаччина)</b> і закінчується на південному сході поблизу Залізних воріт (Румунія). Довжина Карпат становить приблизно 1500 км. Дугою із трьох сторін оточують вони Середньоєвропейську низовину. У північно-західній частині їхня ширина становить 240 км, у південно-західній — 340, а в північно-східній, де розташовані українські Карпати, вона звужується до 100-120 км.</p>
+        <p>Карпати, а особливо Косівщина, — неповторно мальовничий край високих гір, стрімких потоків і чистого повітря. Своєрідність краю, краса його природних ландшафтів, багатий тваринний і рослинний світ Карпат, унікальна скарбниця природних екосистем, де збереглися рідкісні реліктові види флори, фауни і, як ніде в Україні, народні звичаї, традиційна побутова культура ваблять до себе численних туристів.</p>
+        <div class="photos" id="photos">
+            <img src="https://www.example.com/images/karpati1.jpg" alt="Карпати 1">
+            <img src="https://www.example.com/images/karpati2.jpg" alt="Карпати 2">
+            <img src="https://www.example.com/images/karpati3.jpg" alt="Карпати 3">
+        </div>
+    </div>
+
+    <script>
+        function toggleContent() {
+            const extraContent = document.getElementById("extraContent");
+            const photos = document.getElementById("photos");
+
+            if (extraContent.style.display === "none") {
+                // Показати контент
+                extraContent.style.display = "block";
+            } else {
+                // Приховати контент
+                extraContent.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
